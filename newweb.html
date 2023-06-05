@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phan Gia Khang</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div> <!-- Tiêu đề -->
+		<h1>
+			Web kiểm tra xem bạn có <em>GAY</em> không
+		</h1>
+	</div>
+	<div> <!-- Khung nhập họ và tên -->
+		<form id="form">
+			<label for="name">Nhập họ và tên của bạn:</label>
+			<input type="text" id="name" name="name" required>
+			<button type="submit">Kiểm tra</button>
+		</form>
+	</div>
+	<div> <!-- Kết quả kiểm tra -->
+		<p id="result"></p>
+	</div>
+	<script>
+		// Lấy phần tử form
+		var form = document.getElementById("form");
+		// Lấy phần tử result
+		var result = document.getElementById("result");
+		// Thêm sự kiện submit cho form
+		form.addEventListener("submit", function (event) {
+			// Ngăn chặn hành động mặc định của form
+			event.preventDefault();
+			// Lấy giá trị của input name
+			var name = form.elements["name"].value;
+			// So sánh với tên Lê Mạnh Tường
+			if (name === "Lê Mạnh Tường") {
+				// Thông báo bạn bị gay rồi
+				result.textContent = "Bạn bị GAY rồi";
+			} else {
+				// Thông báo chúc mừng bạn không bị gay
+				result.textContent = "Chúc mừng bạn không bị gay";
+			}
+		});
+	</script>
+</body>
+
+</html>
