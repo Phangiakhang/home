@@ -1,0 +1,47 @@
+h2 {
+    color: #000;
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0095ff99;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    flex: 1;
+
+}
+
+li a {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #000;
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.active {
+    background-color: #58257b;
+    color: #fff;
+}
+
+.tab {
+    padding-left: 40px;
+}
